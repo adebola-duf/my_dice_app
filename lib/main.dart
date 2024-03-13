@@ -6,7 +6,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     home: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 73, 49, 113),
+        backgroundColor: Colors.black,
         title: const Center(
           child: Text(
             "My Dice App",
@@ -17,14 +17,7 @@ void main() {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.deepPurple,
-              Colors.grey,
-            ],
-          ),
-        ),
+        color: Colors.black,
         child: const Center(
           child: DiceRoller(),
         ),

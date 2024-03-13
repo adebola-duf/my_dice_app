@@ -44,7 +44,7 @@ class _DiceRollerState extends State<DiceRoller> {
         ),
         TextButton(
           style: TextButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 107, 67, 175),
+            backgroundColor: const Color.fromARGB(255, 33, 33, 33),
             foregroundColor: Colors.white,
             padding: const EdgeInsets.all(20),
           ),
