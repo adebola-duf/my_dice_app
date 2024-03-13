@@ -4,6 +4,7 @@ import 'dart:math';
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
 
+  @override
   State<DiceRoller> createState() {
     return _DiceRollerState();
   }
@@ -14,10 +15,23 @@ final randomizer = Random();
 class _DiceRollerState extends State<DiceRoller> {
   var dice1ImageN = randomizer.nextInt(6) + 1;
   var dice2ImageN = randomizer.nextInt(6) + 1;
+  late int total;
+
+  @override
+  void initState() {
+    super.initState();
+    innititalizeTotal();
+  }
+
+  void innititalizeTotal() {
+    total = dice1ImageN + dice2ImageN;
+  }
+
   void changeDice() {
     setState(() {
       dice1ImageN = randomizer.nextInt(6) + 1;
       dice2ImageN = randomizer.nextInt(6) + 1;
+      total = dice1ImageN + dice2ImageN;
     });
   }
 
@@ -26,6 +40,16 @@ class _DiceRollerState extends State<DiceRoller> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        Text(
+          "Total: $total",
+          style: const TextStyle(
+            fontSize: 25,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(
+          height: 60,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
