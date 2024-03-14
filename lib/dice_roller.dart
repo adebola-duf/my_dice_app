@@ -17,13 +17,7 @@ class _DiceRollerState extends State<DiceRoller> {
   var dice2ImageN = randomizer.nextInt(6) + 1;
   late int total;
 
-  @override
-  void initState() {
-    super.initState();
-    innititalizeTotal();
-  }
-
-  void innititalizeTotal() {
+  _DiceRollerState(){
     total = dice1ImageN + dice2ImageN;
   }
 
